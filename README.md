@@ -1,0 +1,1 @@
+# pycharm-ai-book-project

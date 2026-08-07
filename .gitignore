@@ -1,0 +1,33 @@
+# Environment files with API keys
+.env
+.env.*
+.env.local
+.env.*.local
+
+# Common secret file patterns
+secrets.json
+config/secrets.yaml
+*_api_key.txt
+
+ # Virtual environment
+venv/
+env/
+.venv
+
+ # Jupyter
+.ipynb_checkpoints/
+
+ # Model files and data
+*.pkl
+*.pth
+*.bin
+models/
+data/
+
+ # Python
+__pycache__/
+*.pyc
+
+ # IDE
+.vscode/
+.idea/
