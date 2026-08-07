@@ -1,6 +1,6 @@
 from pinecone import Pinecone, ServerlessSpec
 
-pc=Pinecone(api_key="PINECONE_API_KEY")
+pc=Pinecone(api_key="PINECONE_TOKEN")
 
  # Create an index (one-time operation)
 pc.create_index(name="indice-pinecone-test",
