@@ -1,4 +1,4 @@
-from langchain_classic.agents import Tool, AgentExecutor, LLMSingleActionAgent
+from langchain_classic.agents import Tool
 from langchain_community.tools import DuckDuckGoSearchRun
 from langchain_classic.utilities import WikipediaAPIWrapper
 
