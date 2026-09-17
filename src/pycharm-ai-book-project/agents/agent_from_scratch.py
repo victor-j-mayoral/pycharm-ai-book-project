@@ -1,10 +1,11 @@
 import asyncio
 from openai import AsyncOpenAI
+from typing import Dict, Any, Callable
 
 class AsyncCustomAgent:
 
     """Async version compatible with async LLM wrappers and tools"""
-    def __init__(self, name: str, capabilities: dict[str, callable]):
+    def __init__(self, name: str, capabilities: Dict[str, Callable]):
         self.name = name
         self.capabilities = capabilities
         self.state = {
@@ -43,7 +44,7 @@ class AsyncCustomAgent:
         )
         return response.choices[0].message.content
 
-    async def act(self, action_description: str) -> dict[str, any]:
+    async def act(self, action_description: str) -> Dict[str, Any]:
         """Execute action using available capabilities"""
         # Async capability identification
         capability_name = await self._identify_capability(action_description)
