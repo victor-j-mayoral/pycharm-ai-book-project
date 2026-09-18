@@ -1,11 +1,15 @@
 import asyncio
 from openai import AsyncOpenAI
-from typing import Dict, Any, Callable
+
+# Deprecated aliases for type hints; now it is recommended to use collections.abc importing
+# from typing import Callable, Dict
+from collections.abc import Callable, Mapping
+from typing import Any
 
 class AsyncCustomAgent:
 
     """Async version compatible with async LLM wrappers and tools"""
-    def __init__(self, name: str, capabilities: Dict[str, Callable]):
+    def __init__(self, name: str, capabilities: Mapping[str, Callable]):
         self.name = name
         self.capabilities = capabilities
         self.state = {
@@ -44,7 +48,7 @@ class AsyncCustomAgent:
         )
         return response.choices[0].message.content
 
-    async def act(self, action_description: str) -> Dict[str, Any]:
+    async def act(self, action_description: str) -> Mapping[str, Any]:
         """Execute action using available capabilities"""
         # Async capability identification
         capability_name = await self._identify_capability(action_description)
