@@ -1,0 +1,30 @@
+# Fuentes TypeScript: publicar solo el JavaScript compilado
+src/
+tsconfig.json
+
+# Dependencias y archivos de desarrollo
+node_modules/
+.vscode/
+.git/
+.github/
+.gitignore
+
+# Pruebas y configuración de herramientas
+**/*.test.ts
+**/*.spec.ts
+coverage/
+.eslint*
+.prettier*
+.vscode-test/
+
+# Documentación de desarrollo (conserva README y CHANGELOG)
+docs/
+CONTRIBUTING.md
+
+# Archivos generados que no hacen falta
+*.map
+*.log
+
+# Configuración local o secretos
+.env
+.env.*

@@ -1,0 +1,36 @@
+{
+  "name": "ai-dev-assistant",
+  "displayName": "AI Development Assistant",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.132.0"
+  },
+  "main": "./out/extension.ts",
+  "contributes": {
+    "commands": [
+      {
+        "command": "aiAssistant.explainCode",
+        "title": "AI: Explain This Code"
+      },
+      {
+        "command": "aiAssistant.fixBug",
+        "title": "AI: Fix This Bug"
+      },
+      {
+        "command": "aiAssistant.generateTest",
+        "title": "AI: Generate Tests"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/vscode": "^1.132.0"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^4.3.2"
+  },
+  "allowScripts": {
+    "onnxruntime-node@1.30.0": true,
+    "protobufjs@7.6.6": true
+  }
+}

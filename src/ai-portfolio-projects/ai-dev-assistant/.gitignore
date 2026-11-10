@@ -1,0 +1,12 @@
+# Dependencias de Node.js
+node_modules/
+
+# Pruebas y cobertura
+coverage/
+.vscode-test/
+
+# Configuración local de VS Code (conserva la compartida si la necesitas)
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
