@@ -5,7 +5,7 @@
   "engines": {
     "vscode": "^1.132.0"
   },
-  "main": "./out/extension.ts",
+  "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
@@ -24,10 +24,14 @@
   },
   "devDependencies": {
     "@types/node": "^26.6.6",
-    "@types/vscode": "^1.132.0"
+    "@types/vscode": "^1.132.0",
+    "typescript": "^7.0.2"
   },
   "dependencies": {
     "@huggingface/transformers": "^4.3.2"
+  },
+  "scripts": {
+    "compile": "tsc -p ./"
   },
   "allowScripts": {
     "onnxruntime-node@1.30.0": true,

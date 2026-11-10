@@ -10,3 +10,9 @@ coverage/
 !.vscode/extensions.json
 !.vscode/launch.json
 !.vscode/tasks.json
+
+# Carpeta con código de salida autogenerado y archivos generados
+out/
+
+*.vsix
+package-lock.json

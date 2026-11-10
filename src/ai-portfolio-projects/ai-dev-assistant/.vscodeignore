@@ -1,9 +1,7 @@
 # Fuentes TypeScript: publicar solo el JavaScript compilado
-src/
 tsconfig.json
 
 # Dependencias y archivos de desarrollo
-node_modules/
 .vscode/
 .git/
 .github/

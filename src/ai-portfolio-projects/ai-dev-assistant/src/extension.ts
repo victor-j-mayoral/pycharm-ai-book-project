@@ -4,14 +4,16 @@ import * as vscode from 'vscode';
 import { spawn } from 'node:child_process';
 import * as path from 'node:path';
 
-import { CodeSearchEngine } from '../src/codeSearch';
-import { SearchResult } from '../src/codeSearch';
+import { CodeSearchEngine } from './codeSearch';
+import { SearchResult } from './codeSearch';
 
 let searchEngine: CodeSearchEngine;
 
-/* 
-export function activate(context: vscode.ExtensionContext) {
+
+export async function activate(context: vscode.ExtensionContext) {
+
     console.log('AI Dev Assistant is now active!');
+
     // Register the explain code command
     let explainCommand = vscode.commands.registerCommand(
         'aiAssistant.explainCode',
@@ -44,10 +46,7 @@ export function activate(context: vscode.ExtensionContext) {
         }
     );
     context.subscriptions.push(explainCommand);
-} 
-*/
 
-export async function activate(context: vscode.ExtensionContext) {
 
     // Initialize the code search engine
     const workspaceRoot = vscode.workspace.workspaceFolders?.[0].uri.fsPath;
@@ -98,6 +97,7 @@ export async function activate(context: vscode.ExtensionContext) {
             }
         }
     );
+    context.subscriptions.push(searchCommand);
 }
 
 
