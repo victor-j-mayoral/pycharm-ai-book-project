@@ -1,13 +1,13 @@
-# Fuentes TypeScript: publicar solo el JavaScript compilado
+# TypeScript fonts: publish only the compiled JavaScript
 tsconfig.json
 
-# Dependencias y archivos de desarrollo
+# Dependencies and development files
 .vscode/
 .git/
 .github/
 .gitignore
 
-# Pruebas y configuración de herramientas
+# Tests and tooling configuration
 **/*.test.ts
 **/*.spec.ts
 coverage/
@@ -15,14 +15,14 @@ coverage/
 .prettier*
 .vscode-test/
 
-# Documentación de desarrollo (conserva README y CHANGELOG)
+# Development documentation (keeps README and CHANGELOG)
 docs/
 CONTRIBUTING.md
 
-# Archivos generados que no hacen falta
+# Generated files that are not needed at the end in packaging
 *.map
 *.log
 
-# Configuración local o secretos
+# Local configuration or secret files (Python)
 .env
 .env.*
